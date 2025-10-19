@@ -353,6 +353,22 @@ h2 {
   .nav ul {
     flex-direction: column;
   }
+
+  #server-status {
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+        right: auto;
+        margin: 10px;
+        width: calc(100% - 20px);
+  }
+    
+  .notification-container {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -365,4 +381,37 @@ h2 {
     width: 200px;
     justify-content: center;
   }
+}
+
+.notification {
+    cursor: pointer;
+}
+
+.notification:hover {
+    opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dark-theme {
+  --background: #1a1a1a;
+  --surface: #2d2d2d;
+  --text: #ffffff;
+  --text-light: #b0b0b0;
+}
+
+.dark-theme .feature-card,
+.dark-theme .info-block,
+.dark-theme .rule-item,
+.dark-theme .mod-category {
+    border: 1px solid #404040;
 }
