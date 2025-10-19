@@ -200,6 +200,7 @@ h2 {
   padding: 1.5rem;
   margin-top: 2rem;
   border-radius: var(--radius);
+  color: #333;
 }
 
 .warning-box h3 {
@@ -415,3 +416,4 @@ h2 {
 .dark-theme .mod-category {
     border: 1px solid #404040;
 }
+
