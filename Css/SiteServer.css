@@ -417,3 +417,134 @@ h2 {
     border: 1px solid #404040;
 }
 
+.download-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.download-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.download-card:hover {
+  transform: translateY(-5px);
+}
+
+.download-card h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.download-card p {
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  min-height: 60px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.download-btn.primary {
+  background: var(--accent);
+  color: white;
+}
+
+.download-btn.primary:hover {
+  background: #f57c00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 152, 0, 0.3);
+}
+
+.download-btn.secondary {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.download-btn.secondary:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(46, 125, 50, 0.3);
+}
+
+.download-btn svg {
+  flex-shrink: 0;
+}
+
+.texturepack-info {
+  background: rgba(46, 125, 50, 0.1);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.texturepack-info h4 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.texturepack-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.texturepack-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+}
+
+.texturepack-feature svg {
+  color: var(--accent);
+}
+
+.dark-theme .texturepack-info {
+  background: rgba(46, 125, 50, 0.2);
+}
+
+@media (max-width: 768px) {
+  .download-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .download-buttons {
+    flex-direction: column;
+  }
+  
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
